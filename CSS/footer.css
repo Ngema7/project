@@ -1,0 +1,102 @@
+/* ===== FOOTER BASE ===== */
+.footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+
+  /* spacing control */
+  padding: 30px 20px 15px;
+  margin: 0;              /* extra gap hatauna */
+}
+
+/* ===== FOOTER CONTAINER ===== */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+/* ===== FOOTER SECTION ===== */
+.footer-section {
+  flex: 1 1 250px;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #f5a623;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== LINKS ===== */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #f5a623;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.footer-section .socials {
+  margin-top: 10px;
+}
+
+.footer-section .socials a {
+  margin-right: 12px;
+  font-size: 16px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-section .socials a:hover {
+  color: #f5a623;
+}
+
+/* ===== FOOTER BOTTOM ===== */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 12px;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid #444;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .footer-section .socials a {
+    margin-right: 10px;
+  }
+}

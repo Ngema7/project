@@ -1,0 +1,109 @@
+
+
+.mission-vision {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-decor {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: rgba(31, 78, 121, 0.08);
+    border-radius: 50%;
+    top: -120px;
+    left: -120px;
+    z-index: 0;
+} 
+
+
+.mission-vision .box {
+    position: relative;
+    z-index: 1;
+}
+
+
+.about-decor::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background: rgba(247, 147, 30, 0.08);
+    border-radius: 50%;
+    bottom: -130px;
+    right: -600px;
+}
+@keyframes slowFloat {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(5); }
+}
+
+.about-decor {
+    animation: slowFloat 7s ease-in-out infinite;
+}
+
+
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    padding: 120px 10%;
+    background: var(--bg-section);
+}
+
+.box-mission,.box-vision {
+    width: 45%;
+    background: #ffffff;
+    text-align: center;
+    padding: 80px 40px 60px;
+    position: relative;   
+}
+
+.icon-about {
+    width: 90px;
+    height: 90px;
+    background: #8b0000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -45px;          
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-i {
+    color: #ffffff;
+    font-size: 32px;
+}
+
+.box h2 {
+    color: #8b0000;
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.box p {
+    color: #999999;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .mission-vision {
+        flex-direction: column;   
+        padding: 80px 5%;
+        gap: 80px;                
+    }
+
+    .box {
+        width: 100%;              
+        padding: 80px 25px 50px;
+    }
+    .box-mission{
+        border-radius: 0 0 150px 0px;
+    }
+}

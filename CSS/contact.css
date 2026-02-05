@@ -1,0 +1,247 @@
+
+.location {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%; 
+    max-width: 1200px;
+    margin: 3rem auto; 
+    gap: 2rem;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    background: #313131;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+
+.location-bg-shape {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 0.15;
+    z-index: 1;
+}
+
+.shape-left {
+    background: #6c63ff;
+    top: -30px;
+    left: -30px;
+}
+
+.shape-right {
+    background: #ff6584;
+    bottom: -30px;
+    right: -30px;
+}
+
+
+.map-container {
+    flex: 1;
+    min-height: 350px; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    position: relative; 
+    z-index: 2;
+}
+
+.map-container iframe {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.form-container {
+  width: 400px;
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(145deg, transparent 35%,#e81cff, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+
+
+
+/* ===== LOCATION RESPONSIVE ONLY ===== */
+@media (max-width: 1200px) {
+  .location {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+
+  .map-container {
+    flex: 1 1 48%;
+  }
+
+  .form-container {
+    flex: 1 1 48%;
+  }
+}
+
+@media (max-width: 992px) {
+  .location {
+    flex-direction: column;
+  }
+
+  .map-container,
+  .form-container {
+    width: 100%;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    min-height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .location {
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 20px;
+  }
+
+  .map-container iframe {
+    min-height: 260px;
+  }
+
+  .form textarea {
+    width: 100%;
+  }
+
+  .form input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container iframe {
+    min-height: 220px;
+  }
+}
+
+/* ===== FOOTER RESPONSIVE SAFE ===== */
+@media (max-width: 992px) {
+  .footer-top {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .school-footer {
+    padding: 40px 5% 20px;
+  }
+
+  .footer-section {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+
+  .social-icons {
+    margin-top: 10px;
+  }
+}
